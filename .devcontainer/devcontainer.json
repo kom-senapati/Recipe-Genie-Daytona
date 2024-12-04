@@ -23,5 +23,5 @@
       ]
     }
   },
-  "postCreateCommand": "npm i && npm run dev"
+  "postCreateCommand": "npm i"
 }
