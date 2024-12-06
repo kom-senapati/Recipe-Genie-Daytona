@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Search from "@/components/search";
 import { ShepherdJourneyProvider, useShepherd } from "react-shepherd";
+import { Steps } from "@/utils/steps";
 
 function page() {
   const [categories, setCategories] = useState([]);
@@ -40,109 +41,8 @@ function page() {
         classes:
           "bg-base-100 shadow-xl p-5 w-96 rounded-lg border-2 border-indigo-500",
       },
+      steps: Steps,
     });
-
-    const Steps = [
-      {
-        id: "intro",
-        attachTo: { element: "#main", on: "bottom" },
-        buttons: [
-          {
-            classes: "btn btn-error btn-sm mr-2", // Added mr-2 for margin-right
-            text: "🚪 Exit",
-            action() {
-              return this.cancel();
-            },
-          },
-          {
-            classes: "btn btn-success btn-sm", // Used btn-sm for smaller buttons
-            text: "➡️ Next",
-            action() {
-              return this.next();
-            },
-          },
-        ],
-        title:
-          "<span class='text-lg font-bold'>👋 Welcome to Recipe Genie</span>", // Added classes for larger, bold title
-        text: [
-          "<p>Recipe Genie is your go-to platform for discovering <b>delicious recipes</b> for all your favorite meals! 🍲</p>",
-        ],
-      },
-      {
-        id: "search",
-        attachTo: { element: "#searchBar", on: "bottom" },
-        buttons: [
-          {
-            classes: "btn btn-error btn-sm mr-2", // Added mr-2 for margin-right
-            text: "🚪 Exit",
-            action() {
-              return this.cancel();
-            },
-          },
-          {
-            classes: "btn btn-success btn-sm", // Used btn-sm for smaller buttons
-            text: "➡️ Next",
-            action() {
-              return this.next();
-            },
-          },
-        ],
-        title: "<span class='text-lg font-bold'>🔍 Search</span>", // Added classes for larger, bold title
-        text: [
-          "<p>Use the search bar to find <b>your favorite meals</b> and their recipes. Happy cooking! 🥘</p>",
-        ],
-      },
-      {
-        id: "random",
-        attachTo: { element: "#randomMeal", on: "bottom" },
-        buttons: [
-          {
-            classes: "btn btn-error btn-sm mr-2", // Added mr-2 for margin-right
-            text: "🚪 Exit",
-            action() {
-              return this.cancel();
-            },
-          },
-          {
-            classes: "btn btn-success btn-sm", // Used btn-sm for smaller buttons
-            text: "➡️ Next",
-            action() {
-              return this.next();
-            },
-          },
-        ],
-        title: "<span class='text-lg font-bold'>🎲 Random Meal</span>", // Added classes for larger, bold title
-        text: [
-          "<p>Feeling adventurous? Click here to get a <b>random meal recipe</b> and surprise yourself! 🍛</p>",
-        ],
-      },
-      {
-        id: "categories",
-        attachTo: { element: ".categories", on: "bottom" },
-        buttons: [
-          {
-            classes: "btn btn-error btn-sm mr-2", // Added mr-2 for margin-right
-            text: "🚪 Exit",
-            action() {
-              return this.cancel();
-            },
-          },
-          {
-            classes: "btn btn-success btn-sm", // Used btn-sm for smaller buttons
-            text: "🎉 Finish",
-            action() {
-              return this.complete();
-            },
-          },
-        ],
-        title: "<span class='text-lg font-bold'>📚 Categories</span>", // Added classes for larger, bold title
-        text: [
-          "<p>Explore our <b>diverse categories</b> to find the perfect meal for any occasion. Bon appétit! 🍽️</p>",
-        ],
-      },
-    ];
-
-    tour.addSteps(Steps);
 
     return (
       <button className="btn btn-sm btn-secondary text-lg" onClick={tour.start}>
@@ -176,14 +76,14 @@ function page() {
           !showResults ? "opacity-100" : "opacity-80 blur-sm"
         }`}
       >
-        <div class="flex flex-col items-center justify-center p-5 md:p-10 w-full bg-base-900 text-white">
-          <div class="text-lg md:text-2xl mb-6 text-primary flex items-center justify-center space-x-2">
+        <div className="flex flex-col items-center justify-center p-5 md:p-10 w-full bg-base-900 text-white">
+          <div className="text-lg md:text-2xl mb-6 text-primary flex items-center justify-center space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              class="w-8 h-8"
+              className="w-8 h-8"
             >
               <path
                 strokeLinecap="round"
@@ -200,12 +100,15 @@ function page() {
 
           <StartTour />
 
-          <div class="text-xl md:text-2xl text-secondary mb-6 mt-10 md:mt-16 flex items-center justify-center space-x-2">
+          <div className="text-xl md:text-2xl text-secondary mb-6 mt-10 md:mt-16 flex items-center justify-center space-x-2">
             <span>🍴 Start Your Food Adventure</span>
           </div>
 
           <Link href="/random">
-            <button id="randomMeal" class="btn btn-accent text-lg md:text-xl">
+            <button
+              id="randomMeal"
+              className="btn btn-accent text-lg md:text-xl"
+            >
               🎲 Enjoy a Surprise Meal
             </button>
           </Link>
