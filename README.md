@@ -1,4 +1,4 @@
-# Sample JS/NextJS
+# Sample Recipe Genie
 
 Recipe Genie is your go-to app for exploring delicious recipes, powered by TheMealDB. Discover a variety of dishes, surprise yourself with random recipes, or browse through different categories. With Recipe Genie, enjoy a fun and easy cooking adventure! It's a simple Next.js app built using [TheMealDB](https://www.themealdb.com/api.php).
 
