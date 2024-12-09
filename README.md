@@ -1,6 +1,6 @@
-# Sample NextJS
+# Sample JS/NextJS
 
-A simple nextjs recipe browsing app built using [TheMealDB](https://www.themealdb.com/api.php).
+Recipe Genie is your go-to app for exploring delicious recipes, powered by TheMealDB. Discover a variety of dishes, surprise yourself with random recipes, or browse through different categories. With Recipe Genie, enjoy a fun and easy cooking adventure! It's a simple Next.js app built using [TheMealDB](https://www.themealdb.com/api.php).
 
 ---
 
@@ -53,21 +53,17 @@ A simple nextjs recipe browsing app built using [TheMealDB](https://www.themeald
 
 ## 💻 Tech Stack
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)  
-**Framework for building fast, server-side rendered React applications.**  
-Used to manage the core functionality and routing of the app.
+- ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)  
+  **Fast, server-side React framework** for app functionality and routing.
 
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)  
-**Utility-first CSS framework with customization at your fingertips.**  
-In combination with **daisyUI**, it provides responsive and modern styling.
+- ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)  
+  **Utility-first CSS framework** for responsive, modern designs with **daisyUI**.
 
-![React-Shepherd](https://img.shields.io/badge/React--Shepherd-1A1A1A?style=for-the-badge&logo=react&logoColor=61DAFB)  
-**Add interactive guided tours to your homepage.**  
-Ensures smooth onboarding by guiding users through the key features.
+- ![React-Shepherd](https://img.shields.io/badge/React--Shepherd-1A1A1A?style=for-the-badge&logo=react&logoColor=61DAFB)  
+  **Interactive guided tours** for smooth user onboarding.
 
-![TheMealDB](https://img.shields.io/badge/TheMealDB-FF5733?style=for-the-badge&logoColor=white)  
-**Comprehensive recipe database.**  
-Powers the app with a rich collection of meal categories and recipes.
+- ![TheMealDB](https://img.shields.io/badge/TheMealDB-FF5733?style=for-the-badge&logoColor=white)  
+  **Recipe database** powering meals and categories.
 
 <details>
 <summary>📸 Screenshots</summary>
